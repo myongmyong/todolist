@@ -3,6 +3,7 @@ package kr.or.connect.todo.api;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,10 +43,12 @@ public class TodoController {
 	public TodoDto insertTodo(@RequestBody HashMap<String, String> req) throws JsonParseException, JsonMappingException, IOException {
 		
 		String todo = req.get("todo");
-		System.out.println(todo);
+		Date date = new Date();
 		
 		TodoDto dto = new TodoDto();
 		dto.setTodo(todo);
+		dto.setDate(date);
+
 		
 		int id = service.insertTodo(dto);
 		TodoDto content = service.getTodo(id);

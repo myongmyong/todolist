@@ -28,7 +28,6 @@
                     var obj = response[i];
                         if(obj.completed == 0){
                             $('.todo-list').prepend('<li id='+obj.id+'>'+'<div class="view">'+'<input class="toggle" type="checkbox">'+'<label>'+obj.todo+'</label>'+'<button class="destroy">'+'</button>'+'</div>'+'</li>');
-                        
                         }else if(obj.completed == 1){
                             $('.todo-list').prepend('<li id='+obj.id+' class="completed">'+'<div class="view">'+'<input class="toggle" type="checkbox" checked>'+'<label>'+obj.todo+'</label>'+'<button class="destroy">'+'</button>'+'</div>'+'</li>');
                         }
