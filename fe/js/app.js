@@ -15,7 +15,6 @@
         selectByCompleted();
 
         clearCompleted();       
-	
     });
 
     function getTodoList(){

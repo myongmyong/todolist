@@ -83,4 +83,5 @@ public class TodoController {
 		int completed = 1;
 		service.clearCompleted(completed);	
 	}
+	
 }
